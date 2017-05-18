@@ -5069,6 +5069,13 @@
         <item url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.9.2/npm/node_modules/bcryptjs/externs/minimal-env.js" />
         <item url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.9.2/npm/node_modules/bcryptjs/externs/bcrypt.js" />
         <item url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.9.2/npm/node_modules/bcryptjs/scripts/build.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/lib/index.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/lib/stringify.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/lib/utils.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/lib/parse.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/dist/qs.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/page/index.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/page/page.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -10139,6 +10146,13 @@
       <root url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.9.2/npm/node_modules/bcryptjs/externs/minimal-env.js" />
       <root url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.9.2/npm/node_modules/bcryptjs/externs/bcrypt.js" />
       <root url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.9.2/npm/node_modules/bcryptjs/scripts/build.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/lib/index.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/lib/stringify.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/lib/utils.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/lib/parse.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/qs/dist/qs.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/page/index.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/kadira_flow-router/2.12.1/npm/node_modules/page/page.js" />
     </CLASSES>
     <SOURCES />
   </library>

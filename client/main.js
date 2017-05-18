@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import Users from '../imports/api/user.js';
+// import Users from '../imports/api/user.js';
 
 import './main.html';
 
@@ -32,3 +32,10 @@ Template.newUser.events({
     reader.readAsBinaryString(file);
   }
 });
+//
+// FlowRouter.route('/blog/:postId', {
+//   name: 'blogPost',
+//   action: function(params) {
+//     console.log("This is my blog post:", params.postId);
+//   }
+// });
