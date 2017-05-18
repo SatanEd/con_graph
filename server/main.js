@@ -2,6 +2,8 @@ import {Meteor} from 'meteor/meteor';
 import Users from '../imports/api/user.js';
 
 const fs = require('fs');
+const path = require('path');
+const projectDir = process.env["PWD"].replace(__dirname, '');
 
 const newUser = {
   name: 'George',
@@ -42,11 +44,20 @@ Meteor.startup(() => {
 });
 
 Meteor.methods({
-  'file-upload': function (fileInfo, fileData) {
-    fs.writeFile(`${fileInfo.clientPath}/assets/images/${fileInfo}`, fileData.fileName, 'binary', (err) => {
+  'registration': function (fileInfo, fileData) {
+    let ext = path.extname(fileInfo.fileName),
+      imageExts = ['.png', '.jpg', '.gif']
+
+    try {
+      if (ext && imageExts.some((itm) => itm === ext)) {
+        fs.writeFileSync(`${projectDir + fileInfo.clientPath}/assets/images/${fileInfo.fileName}`, fileData, 'binary')
+        console.log('\x1b[32m', `File with name "${fileInfo.fileName}" created.`, '\x1b[0m')
+        return `File with name "${fileInfo.fileName}" created.`
+      } else {
+        return `Invalid extension of "${fileInfo.fileName}" file`
+      }
+    } catch (err) {
       if (err) throw err
-      console.log('\x1b[32m', `File with name "${fileInfo}" created.`, '\x1b[0m')
-    });
-    return `File with name "${fileInfo}" created.`;
+    }
   }
 });
