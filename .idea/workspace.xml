@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ad80d4-b89b-4f08-95cb-0b4cd21c696e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/assets/styles/temp.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ap_holidays.iml" afterPath="$PROJECT_DIR$/.idea/ap_holidays.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -413,7 +407,7 @@
       <workItem from="1494490189174" duration="26000" />
       <workItem from="1494490288091" duration="10000" />
       <workItem from="1494490342550" duration="29355000" />
-      <workItem from="1494829664980" duration="50547000" />
+      <workItem from="1494829664980" duration="50599000" />
     </task>
     <task id="LOCAL-00001" summary="Agile Partners logo">
       <created>1495114789173</created>
@@ -443,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495114909071</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="prokect files">
+      <created>1495114935453</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1495114935453</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81516000" />
+    <option name="totallyTimeSpent" value="81568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1032" extended-state="6" />
@@ -483,7 +484,8 @@
     <MESSAGE value="Form changed" />
     <MESSAGE value="file upload (c)" />
     <MESSAGE value="images Ext &amp;&amp; path module" />
-    <option name="LAST_COMMIT_MESSAGE" value="images Ext &amp;&amp; path module" />
+    <MESSAGE value="prokect files" />
+    <option name="LAST_COMMIT_MESSAGE" value="prokect files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
