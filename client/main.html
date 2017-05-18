@@ -8,17 +8,17 @@
 </body>
 
 <template name="newUser">
-    <form id="newUser" enctype="multipart/form-data" method="file-upload">
-        <input type="text" name="name" placeholder="Your name">
-        <input type="text" name="lastname" placeholder="Your lastname">
-        <input type="email" name="email" placeholder="Your email address">
-        <input type="date" name="birthDate" placeholder="Your name">
+    <form id="newUser" enctype="multipart/form-data" method="registration">
+        <input type="text" required name="name" placeholder="Your name">
+        <input type="text" required name="lastname" placeholder="Your lastname">
+        <input type="email" required name="email" placeholder="Your email address">
+        <input type="date"  required name="birthDate" placeholder="Your name">
         <input type="file" name="avatar" accept="image/jpeg,image/png,image/gif">
-        <select name="departament">
+        <select  required name="departament">
             <option value="Agile Parners">Agile Parners</option>
             <option value="Piata centrala">Piata centrala</option>
         </select>
-        <select name="role">
+        <select required name="role">
             <option value="project manager">Project manager</option>
             <option value="director">Director</option>
             <option value="frontend developer">Frontend developer</option>
@@ -28,12 +28,12 @@
         </select>
         <input id="approve_ab" type="checkbox" name="apprAllowed">
         <label for="approve_ab">Approve allowed</label>
-        <select name="language">
+        <select name="language" value="English">
             <option value="English">English</option>
             <option value="Romanian">Romanian</option>
             <option value="Russian">Russian</option>
         </select>
-        <select name="workDays">
+        <select required name="workDays">
             <option value="0-4">Mon-Fri</option>
             <option value="5-6">Sat-Sun</option>
         </select>
