@@ -1,0 +1,48 @@
+<head>
+  <title>ap_holidays</title>
+</head>
+
+<body>
+  {{> newUser}}
+  {{> user}}
+</body>
+
+<template name="newUser">
+    <form id="newUser" enctype="multipart/form-data" method="file-upload">
+        <input type="text" name="name" placeholder="Your name">
+        <input type="text" name="lastname" placeholder="Your lastname">
+        <input type="email" name="email" placeholder="Your email address">
+        <input type="date" name="birthDate" placeholder="Your name">
+        <input type="file" name="avatar" accept="image/jpeg,image/png,image/gif">
+        <select name="departament">
+            <option value="Agile Parners">Agile Parners</option>
+            <option value="Piata centrala">Piata centrala</option>
+        </select>
+        <select name="role">
+            <option value="project manager">Project manager</option>
+            <option value="director">Director</option>
+            <option value="frontend developer">Frontend developer</option>
+            <option value="backend developer">backend developer</option>
+            <option value="designer">Designer</option>
+            <option value="qa">QA</option>
+        </select>
+        <input id="approve_ab" type="checkbox" name="apprAllowed">
+        <label for="approve_ab">Approve allowed</label>
+        <select name="language">
+            <option value="English">English</option>
+            <option value="Romanian">Romanian</option>
+            <option value="Russian">Russian</option>
+        </select>
+        <select name="workDays">
+            <option value="0-4">Mon-Fri</option>
+            <option value="5-6">Sat-Sun</option>
+        </select>
+        <button type="submit">Create</button>
+    </form>
+</template>
+
+<template name="user">
+{{#each user in users}}
+    <div>{{user.name}} <p>{{user.email}}</p></div>
+{{/each}}
+</template>
