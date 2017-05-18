@@ -21,8 +21,12 @@ Template.newUser.events({
     var file = e.target.elements.avatar.files[0];
     var reader = new FileReader();
     reader.onload = function() {
-      Meteor.call('file-upload', {fileName: file.name, clientPath: __dirname}, reader.result, (err, dt) => {
-        console.log(err, dt)
+      Meteor.call('registration', {fileName: file.name, clientPath: __dirname}, reader.result, function (err, dt) {
+        if (err) {
+          console.log('%c' + err, 'color: red');
+        } else {
+          console.log('%c' + dt, 'color: green');
+        }
       });
     };
     reader.readAsBinaryString(file);
