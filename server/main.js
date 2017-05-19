@@ -48,16 +48,16 @@ Meteor.methods({
     let ext = path.extname(fileInfo.fileName),
       imageExts = ['.png', '.jpg', '.gif']
 
-    try {
-      if (ext && imageExts.some((itm) => itm === ext)) {
-        fs.writeFileSync(`${projectDir + fileInfo.clientPath}/assets/images/${fileInfo.fileName}`, fileData, 'binary')
-        console.log('\x1b[32m', `File with name "${fileInfo.fileName}" created.`, '\x1b[0m')
-        return `File with name "${fileInfo.fileName}" created.`
-      } else {
-        return `Invalid extension of "${fileInfo.fileName}" file`
-      }
-    } catch (err) {
-      if (err) throw err
-    }
+    // try {
+    //   if (ext && imageExts.some((itm) => itm === ext)) {
+    //     fs.writeFileSync(`${projectDir + fileInfo.clientPath}/assets/images/${fileInfo.fileName}`, fileData, 'binary')
+    //     console.log('\x1b[32m', `File with name "${fileInfo.fileName}" created.`, '\x1b[0m')
+    //     return `File with name "${fileInfo.fileName}" created.`
+    //   } else {
+    //     return `Invalid extension of "${fileInfo.fileName}" file`
+    //   }
+    // } catch (err) {
+    //   if (err) throw err
+    // }
   }
 });

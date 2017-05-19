@@ -2,10 +2,9 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 import { ReactiveVar } from 'meteor/reactive-var';
-import Usr from '../imports/api/user.js';
+// import Usr from '../imports/api/user.js';
 import '../imports/ui/index.html';
 import '../imports/ui/nav.html';
-
 import './main.html';
 
 Template.user.helpers({
