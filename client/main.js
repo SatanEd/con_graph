@@ -1,13 +1,22 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { Session } from 'meteor/session';
 import { ReactiveVar } from 'meteor/reactive-var';
 import Usr from '../imports/api/user.js';
+import '../imports/ui/index.html';
+import '../imports/ui/nav.html';
 
 import './main.html';
 
 Template.user.helpers({
   users() {
     return Usr.find();
+  },
+});
+
+Template.body.helpers({
+  template: function() {
+    return Session.get('template');
   },
 });
 
@@ -36,13 +45,13 @@ Template.newUser.events({
 FlowRouter.route('/', {
   name: 'index',
   action: function() {
-    console.log("This is my blog post:", Usr.findOne({}));
+    Session.set('template', 'newUser');
   }
 });
-//
-// FlowRouter.route('/blog/:postId', {
-//   name: 'blogPost',
-//   action: function(params) {
-//     console.log("This is my blog post:", params.postId);
-//   }
-// });
+
+FlowRouter.route('/dashboard', {
+  name: 'blogPost',
+  action: function() {
+    Session.set('template', 'loginForm');
+  }
+});
