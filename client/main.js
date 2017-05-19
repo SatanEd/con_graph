@@ -11,8 +11,10 @@ import {Accounts} from 'meteor/accounts-base';
 Template.user.helpers({
   users() {
     let acc;
-    if (acc = Accounts.users.findOne({})) {
+    if (acc = Meteor.user()) {
       return acc.profile.name;
+    } else {
+      return "Guest";
     }
   },
 });
