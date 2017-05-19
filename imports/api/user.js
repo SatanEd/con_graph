@@ -3,10 +3,9 @@
  */
 import { Mongo } from 'meteor/mongo';
 
-let Users = new Mongo.Collection('users'),
-    ObjectId = Users.ObjectID;
+let Usr = new Mongo.Collection('usr');
 
-Users.schema = new SimpleSchema({
+Usr.schema = new SimpleSchema({
   name: {type: String},
   lastname: {type: String},
   email: {type: String, regEx: SimpleSchema.RegEx.Email},
@@ -32,7 +31,7 @@ Users.schema = new SimpleSchema({
 });
 
 if (Meteor.isServer) {
-  Users._ensureIndex('email', {unique: 1, sparse: 1});
+  Usr._ensureIndex('email', {unique: 1, sparse: 1});
 }
 
-export default Users;
+export default Usr;

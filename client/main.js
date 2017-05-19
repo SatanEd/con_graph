@@ -1,13 +1,13 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-// import Users from '../imports/api/user.js';
+import Usr from '../imports/api/user.js';
 
 import './main.html';
 
 Template.user.helpers({
   users() {
-    return Users.find();
+    return Usr.find();
   },
 });
 
@@ -30,6 +30,13 @@ Template.newUser.events({
       });
     };
     reader.readAsBinaryString(file);
+  }
+});
+
+FlowRouter.route('/', {
+  name: 'index',
+  action: function() {
+    console.log("This is my blog post:", Usr.findOne({}));
   }
 });
 //

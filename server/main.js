@@ -1,5 +1,5 @@
 import {Meteor} from 'meteor/meteor';
-import Users from '../imports/api/user.js';
+import Usr from '../imports/api/user.js';
 
 const fs = require('fs');
 const path = require('path');
@@ -31,13 +31,13 @@ const newUser = {
 
 Meteor.startup(() => {
   try {
-    Users.schema.validate(newUser)
-    Users.insert(newUser)
+    Usr.schema.validate(newUser)
+    Usr.insert(newUser)
   } catch (err) {
     if (Meteor.isClient) {
       alert(err)
     } else {
-      var colName = Users.rawCollection().namespace.slice().split('.')[1]
+      var colName = Usr.rawCollection().namespace.slice().split('.')[1]
       console.log('\x1b[31m', `Can\'t inset new document in "${colName}" collection`, '\x1b[0m')
     }
   }
