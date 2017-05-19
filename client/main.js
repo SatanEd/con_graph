@@ -6,7 +6,6 @@ import {ReactiveVar} from 'meteor/reactive-var';
 import '../imports/ui/index.html';
 import '../imports/ui/nav.html';
 import './main.html';
-import {Accounts} from 'meteor/accounts-base';
 
 Template.user.helpers({
   users() {

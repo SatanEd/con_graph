@@ -27,3 +27,4 @@ accounts-google
 kadira:flow-router
 acemtp:accounts-slack
 session
+accounts-ui
