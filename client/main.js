@@ -1,20 +1,24 @@
-import { Meteor } from 'meteor/meteor';
-import { Template } from 'meteor/templating';
-import { Session } from 'meteor/session';
-import { ReactiveVar } from 'meteor/reactive-var';
+import {Meteor} from 'meteor/meteor';
+import {Template} from 'meteor/templating';
+import {Session} from 'meteor/session';
+import {ReactiveVar} from 'meteor/reactive-var';
 // import Usr from '../imports/api/user.js';
 import '../imports/ui/index.html';
 import '../imports/ui/nav.html';
 import './main.html';
+import {Accounts} from 'meteor/accounts-base';
 
 Template.user.helpers({
   users() {
-    return Usr.find();
+    let acc;
+    if (acc = Accounts.users.findOne({})) {
+      return acc.profile.name;
+    }
   },
 });
 
 Template.body.helpers({
-  template: function() {
+  template: function () {
     return Session.get('template');
   },
 });
@@ -28,7 +32,7 @@ Template.newUser.events({
 
     var file = e.target.elements.avatar.files[0];
     var reader = new FileReader();
-    reader.onload = function() {
+    reader.onload = function () {
       Meteor.call('registration', {fileName: file.name, clientPath: __dirname}, reader.result, function (err, dt) {
         if (err) {
           console.log('%c' + err, 'color: red');
@@ -43,14 +47,14 @@ Template.newUser.events({
 
 FlowRouter.route('/', {
   name: 'index',
-  action: function() {
+  action: function () {
     Session.set('template', 'newUser');
   }
 });
 
 FlowRouter.route('/dashboard', {
   name: 'blogPost',
-  action: function() {
+  action: function () {
     Session.set('template', 'loginForm');
   }
 });
