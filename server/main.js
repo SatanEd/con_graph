@@ -30,6 +30,11 @@ const newUser = {
 };
 
 Meteor.startup(() => {
+  ServiceConfiguration.configurations.upsert(
+    { service: "conced" },
+    { $set: { clientId: "107625434034903168809", secret: "75a730b58f5691de5522789070c319bc" } }
+  );
+
   try {
     Usr.schema.validate(newUser)
     Usr.insert(newUser)

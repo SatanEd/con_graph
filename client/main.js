@@ -49,13 +49,13 @@ Template.newUser.events({
 FlowRouter.route('/', {
   name: 'index',
   action: function () {
-    Session.set('template', 'newUser');
+    Session.set('template', 'loginForm');
   }
 });
 
-FlowRouter.route('/dashboard', {
-  name: 'blogPost',
+FlowRouter.route('/signup', {
+  name: 'signup',
   action: function () {
-    Session.set('template', 'loginForm');
+    Session.set('template', 'newUser');
   }
 });

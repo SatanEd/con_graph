@@ -28,3 +28,4 @@ kadira:flow-router
 acemtp:accounts-slack
 session
 accounts-ui
+service-configuration
